@@ -7,75 +7,7 @@
   <title>Finals</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-
-    .video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: -1;
-    }
-
-    .video-background video {
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-    }
-
-    .main-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      height: 100vh;
-    }
-
-    .card {
-      width: 100px;
-      height: 100px;
-      border-radius: 100%;
-      background-color: #AF701D;
-      box-shadow: inset -1px -3px 3px rgba(32, 15, 0, 0.5), inset 1px 3px 3px rgba(232, 225, 216, 0.5);
-    }
-
-    .btn-music {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: #2297EB;
-      box-shadow: inset -2px -5px 4px rgba(16, 13, 106, 0.6), inset 10px 5px 4px rgba(232, 225, 216, .5);
-      cursor: pointer;
-      transition: transform 0.5s ease, background-color 0.3s ease;
-    }
-
-    .btn-music:hover {
-      transform: scale(1.1);
-    }
-
-    .btn-music i {
-      color: #ff9100;
-      font-size: 32px;
-    }
-
-    .audio-background {
-      visibility: hidden;
-      height: 0;
-      width: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
