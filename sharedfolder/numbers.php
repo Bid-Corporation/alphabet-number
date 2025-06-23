@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Finals</title>
+    <title>Numbers</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -25,19 +25,14 @@
             <div class="row mb-5 justify-content-center">
                 <div class="col-12 col-md-6 mx-auto">
                     <div class="alphabet-button my-3" >
-                        <button><a href="alphabets.php">Alphabets</a></button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 mx-auto">
-                    <div class="number-button my-3">
-                        <button><a href="numbers.php">Numbers</a></button>
+                        <button><a href="#">Numbers</a></button>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 mx-auto">
                     <div class="back-button">
-                        <button><a href="#"><i class="fa-solid fa-arrow-left"></i></a></button>
+                        <button><a href="alphanum.php"><i class="fa-solid fa-arrow-left"></i></a></button>
                     </div>
                 </div>
             </div>
