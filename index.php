@@ -49,7 +49,7 @@
             height: 150px;
             border-radius: 40px;
             background-color: #AF701D;
-            box-shadow: inset -2px -5px 4px rgba(16, 13, 106, 0.6), inset 10px 5px 4px rgba(232, 225, 216, .5);
+            box-shadow: inset -2px -5px 4px rgba(16, 13, 106, 0.6), inset 10px 5px 4px rgba(232, 225, 216 0.5), inset 5px 10px 8px rgba(0, 0, 0, 0.5);
         }
 
         .btn-play {
