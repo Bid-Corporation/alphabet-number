@@ -37,7 +37,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 mx-auto">
                     <div class="back-button">
-                        <button><a href="#"><i class="fa-solid fa-arrow-left"></i></a></button>
+                        <button><a href="../index.php"><i class="fa-solid fa-arrow-left"></i></a></button>
                     </div>
                 </div>
             </div>

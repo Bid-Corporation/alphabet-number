@@ -96,13 +96,14 @@
             transform: scale(1.1);
         }
 
-        .btn-music i, .btn-admin {
+        .btn-music i,
+        .btn-admin {
             color: #FEE527;
             font-size: 32px;
         }
 
         .btn-play i {
-            color:#FEE527;
+            color: #FEE527;
             font-size: 60px;
         }
 
@@ -130,11 +131,10 @@
                 <div class="d-flex flex-column align-items-start gap-3">
 
                     <div class="card-play p-2 d-flex align-items-center justify-content-center">
-                        <button class="btn btn-play">
+                        <a href="sharedfolder/alphanum.php" class="btn btn-play">
                             <i class="fas fa-play"></i>
-                        </button>
+                        </a>
                     </div>
-
                     <div class="d-flex gap-3">
 
                         <div class="card-music p-2 d-flex align-items-center justify-content-center">
