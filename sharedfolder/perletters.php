@@ -7,17 +7,17 @@
     <title>Finals</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style-perletters.css">
+    <link rel="stylesheet" href="../style-perletters.css">
 </head>
 
 
 <body>
     <div class="video-background">
-        <video autoplay loop muted playsinline src="background/bgvideo.mp4"></video>
+        <video autoplay loop muted playsinline src="../background/bgvideo.mp4"></video>
     </div>
 
     <div class="audio-background">
-        <audio id="bgAudio" loop src="background/bgaudio.mp3"></audio>
+        <audio id="bgAudio" loop src="../background/bgaudio.mp3"></audio>
     </div>
 
     <div class="main-wrapper">
