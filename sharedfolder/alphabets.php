@@ -13,17 +13,14 @@
 
 <body>
 
-    <!-- VIDEO BACKGROUND -->
     <div class="video-background">
         <video autoplay loop muted playsinline src="../background/bgvideo.mp4"></video>
     </div>
 
-    <!-- AUDIO BACKGROUND -->
     <div class="audio-background">
         <audio id="bgAudio" loop src="../background/bgaudio.mp3"></audio>
     </div>
 
-    <!-- ALPHABET HOMEPAGE -->
     <div class="container-fluid alphabet-home">
         <div class="container text-center">
             <div class="row my-3">
@@ -36,7 +33,6 @@
             <div class="row my-3">
                 <div class="button-container rounded-5">
                     <div class="row my-3" id="alphabet-buttons">
-                        <!-- LOOP OF ALPHABET lETTERS -->
                     </div>
                 </div>
             </div>
@@ -75,7 +71,7 @@
         ];
 
         const links = [
-            // put the liink of alphabet pages here...copy the same format of letters. ex."Aa.php, Bb.php, Cc.php ..."
+
         ];
 
         var buttonContainer = document.getElementById("alphabet-buttons");
