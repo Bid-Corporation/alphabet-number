@@ -73,8 +73,8 @@
             "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
         ];
 
-        const links = [
-        ];
+        const links = numbers.map(num => "pernumbers.php?num=" + num);
+
 
         var buttonContainer = document.getElementById("number-buttons");
         

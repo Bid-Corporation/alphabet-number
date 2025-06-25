@@ -31,7 +31,7 @@
 
                         <div class="card-buttons">
     <div class="card-back">
-        <a href="alphabets.php" class="btn btn-back">
+        <a href="numbers.php" class="btn btn-back">
             <i class="fas fa-arrow-left"></i>
         </a>
     </div>

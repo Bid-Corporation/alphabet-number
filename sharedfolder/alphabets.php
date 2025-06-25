@@ -70,9 +70,9 @@
             "Uu", "Vv", "Ww", "Xx", "Yy", "Zz"
         ];
 
-        const links = [
+        const links = letters.map(letter => "perletters.php?char=" + letter.charAt(0).toUpperCase());
 
-        ];
+
 
         var buttonContainer = document.getElementById("alphabet-buttons");
         
