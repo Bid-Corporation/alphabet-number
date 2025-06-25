@@ -12,24 +12,35 @@
 </head>
 
 <body>
+
+    <!-- VIDEO BACKGROUND -->
     <div class="video-background">
         <video autoplay loop muted playsinline src="../background/bgvideo.mp4"></video>
     </div>
 
+    <!-- AUDIO BACKGROUND -->
     <div class="audio-background">
         <audio id="bgAudio" loop src="../background/bgaudio.mp3"></audio>
     </div>
 
-    <div class="admin-page">
-        <div class="container text-center mb-4">
-            <div class="row mb-5 justify-content-center">
-                <div class="col-12 col-md-6 mx-auto">
-                    <div class="alphabet-button my-3" >
-                        <button><a href="#">Alphabets</a></button>
+    <!-- ALPHABET HOMEPAGE -->
+    <div class="container-fluid alphabet-home">
+        <div class="container text-center">
+            <div class="row my-3">
+                <div class="col-12 col-sm-6 mx-auto">
+                    <div class="alphabet-title py-3 text-center">
+                        Alphabets
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row my-3">
+                <div class="button-container rounded-5">
+                    <div class="row my-3" id="alphabet-buttons">
+                        <!-- LOOP OF ALPHABET lETTERS -->
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center my-3">
                 <div class="col-12 mx-auto">
                     <div class="back-button">
                         <button><a href="alphanum.php"><i class="fa-solid fa-arrow-left"></i></a></button>
@@ -56,6 +67,32 @@
                 button.style.backgroundColor = '#D80303';
             }
         }
+
+        const letters = [
+            "Aa", "Bb", "Cc", "Dd", "Ee", "Ff", "Gg", "Hh", "Ii", "Jj",
+            "Kk", "Ll", "Mm", "Nn", "Oo", "Pp", "Qq", "Rr", "Ss", "Tt",
+            "Uu", "Vv", "Ww", "Xx", "Yy", "Zz"
+        ];
+
+        const links = [
+            // put the liink of alphabet pages here...copy the same format of letters. ex."Aa.php, Bb.php, Cc.php ..."
+        ];
+
+        var buttonContainer = document.getElementById("alphabet-buttons");
+        
+        var htmlContent = "";
+
+        for (var i = 0; i < letters.length; i++) {
+            htmlContent +=
+                '<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 my-3 text-center">' +
+                    '<a href="' + links[i] + '" target="_self">' +
+                        '<button class="alphabet-button py-3 px-4 rounded-5">' + letters[i] + '</button>' +
+                    '</a>' +
+                '</div>';
+        }
+
+        buttonContainer.innerHTML = htmlContent;
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
