@@ -24,7 +24,7 @@
         <div class="container text-center mb-4">
             <div class="row mb-5 justify-content-center">
                 <div class="col-12 col-md-6 mx-auto">
-                    <div class="alphabet-button my-3" >
+                    <div class="number-button my-3" >
                         <button><a href="alphabets.php">Alphabets</a></button>
                     </div>
                 </div>
