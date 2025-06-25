@@ -149,3 +149,47 @@
     color: #fee527;
 }
 
+/* aphabet home */
+
+.alphabet-home {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alphabet-title {
+    background-color: #0b5488;
+    border: 1rem solid #af701d;
+    color: #fee527;
+    font-weight: bold;
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    border-radius: 40px;
+    box-shadow: inset -5px -7px 3px rgba(32, 15, 0, 0.5), inset 5px 7px 3px rgba(232, 225, 216, 0.5);
+    margin: 0 15px;
+}
+
+.alphabet-home, .back-button a {
+    text-decoration: none;
+    color: #fee527;
+}
+
+.alphabet-button {
+    width: 130px;
+    color: #fee527;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    background-color: #af1d1d;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    box-shadow: inset -5px -7px 3px rgba(32, 15, 0, 0.5), inset 5px 7px 3px rgba(232, 225, 216, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.alphabet-button:hover {
+    transform: scale(1.2);
+}
+
+.button-container {
+    background-color: #edde92c7;
+}
