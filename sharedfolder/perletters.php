@@ -30,16 +30,18 @@
                         </div>
 
                         <div class="card-buttons">
-                            <div class="card-back">
-                                <div class="btn btn-back">
-                                    <i class="fas fa-arrow-left"></i>
-                                </div>
-                            </div>
-                            <div class="card-home">
-                                <div class="btn btn-home">
-                                    <i class="fas fa-house"></i>
-                                </div>
-                            </div>
+    <div class="card-back">
+        <a href="alphabets.php" class="btn btn-back">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+    <div class="card-home">
+        <a href="alphanum.php" class="btn btn-home">
+            <i class="fas fa-house"></i>
+        </a>
+    </div>
+</div>
+
                         </div>
                     </div>
                 </div>
