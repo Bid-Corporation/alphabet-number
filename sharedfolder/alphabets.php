@@ -29,8 +29,10 @@ $alphabetsResult = mysqli_query($conn, $sql)
   <div class="container-fluid alphabet-home">
     <div class="container text-center">
       <div class="row my-3">
-        <div class="col-12 col-sm-6 mx-auto">
-          <div class="alphabet-title py-3 text-center">Alphabets</div>
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="alphabet-container p-3">
+            <div class="alphabet-title p-3 text-center">Alphabets</div>
+          </div>
         </div>
       </div>
 

@@ -30,8 +30,10 @@ $numbersResult = mysqli_query($conn, $sql)
     <div class="container text-center">
 
       <div class="row my-3">
-        <div class="col-12 col-sm-6 mx-auto">
-          <div class="alphabet-title py-3 text-center">Numbers</div>
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="number-container p-3">
+            <div class="number-title py-3 text-center">Numbers</div>
+          </div>
         </div>
       </div>
 
