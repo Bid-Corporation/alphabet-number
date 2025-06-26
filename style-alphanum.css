@@ -84,7 +84,7 @@ html, body {
   width: 100px;
   height: 70px;
   border-radius: 40px;
-  background-color: rgba(25, 170, 158, 1);
+  background-color: #19aa9e;
   box-shadow: inset -5px -8px 3px rgba(16, 13, 106, 0.5),
               inset 5px 8px 3px rgba(232, 225, 216, 0.5);
   display: flex;

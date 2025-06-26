@@ -22,16 +22,21 @@
         <audio id="bgAudio" loop src="background/bgaudio.mp3"></audio>
     </div>
 
-    <!-- PLAY BUTTON -->
     <div class="main-wrapper">
         <div class="container mb-4">
             <div class="d-flex justify-content-center">
-                <div class="d-flex flex-column align-items-start gap-3">
+                <div class="d-flex flex-column align-items-center gap-3">
+
+                    <div class="logo-wrapper">
+                        <img src="./background/logo.png" class="logo-image" alt="Alpha Kids Logo">
+                    </div>
+
                     <div class="card-play p-2 d-flex align-items-center justify-content-center">
                         <a href="sharedfolder/alphanum.php" class="btn btn-play">
                             <i class="fas fa-play" style="margin-top: 1.3rem;"></i>
                         </a>
                     </div>
+
                     <div class="d-flex gap-3">
                         <div class="card-music p-2 d-flex align-items-center justify-content-center">
                             <button class="btn btn-music" onclick="toggleMusic(this)">
@@ -44,6 +49,7 @@
                             </button>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

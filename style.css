@@ -89,3 +89,14 @@ html, body {
     color: #FEE527;
     font-size: 32px;
 }
+
+.logo-wrapper {
+    margin-bottom: -150px;      
+    text-align: center;
+}
+
+.logo-image {
+    width: 800px;      
+    height: auto;
+    display: inline-block;
+}
