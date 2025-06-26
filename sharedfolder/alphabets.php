@@ -1,11 +1,19 @@
+<?php
+require_once __DIR__ . '/../connect.php';
+$sql = "SELECT alphabetsID, alphabets, alphabetsWord
+        FROM   alphabetsNumbers
+        ORDER  BY alphabets";
+$alphabetsResult = mysqli_query($conn, $sql)
+?>
+
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alphabets</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../style-alphabets.css">
 </head>
@@ -14,7 +22,6 @@
   <div class="video-background">
     <video autoplay loop muted playsinline src="../background/bgvideo.mp4"></video>
   </div>
-
   <div class="audio-background">
     <audio id="bgAudio" loop src="../background/bgaudio.mp3"></audio>
   </div>
@@ -27,7 +34,26 @@
         </div>
       </div>
 
-      <div class="button-container" id="alphabet-buttons"></div>
+      <div class="button-container" id="alphabet-buttons">
+        <?php
+          if (mysqli_num_rows($alphabetsResult) == 0) {
+              echo '<p class="text-muted">No records found.</p>';
+          } else {
+              while ($row = mysqli_fetch_assoc($alphabetsResult)) {
+
+                  $letter = htmlspecialchars($row['alphabets']);          
+                //   $word   = htmlspecialchars($row['alphabetsWord']);      
+                  $link   = 'perletters.php?char=' . rawurlencode($letter);
+
+                  echo <<<HTML
+                    <a href="{$link}" target="_self" title="{$word}">
+                      <button class="alphabet-button rounded-5">{$letter}</button>
+                    </a>
+                  HTML;
+              }
+          }
+        ?>
+      </div>
 
       <div class="row justify-content-center my-4">
         <div class="col-auto">
@@ -43,29 +69,6 @@
     </div>
   </div>
 
-  <script>
-    const letters = [
-      "Aa", "Bb", "Cc", "Dd", "Ee", "Ff", "Gg", "Hh", "Ii", "Jj",
-      "Kk", "Ll", "Mm", "Nn", "Oo", "Pp", "Qq", "Rr", "Ss", "Tt",
-      "Uu", "Vv", "Ww", "Xx", "Yy", "Zz"
-    ];
-
-    const links = letters.map(letter => "perletters.php?char=" + letter.charAt(0).toUpperCase());
-    const buttonContainer = document.getElementById("alphabet-buttons");
-    let htmlContent = "";
-
-    for (let i = 0; i < letters.length; i++) {
-      htmlContent += `
-        <a href="${links[i]}" target="_self">
-          <button class="alphabet-button rounded-5">${letters[i]}</button>
-        </a>
-      `;
-    }
-
-    buttonContainer.innerHTML = htmlContent;
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
