@@ -1,4 +1,4 @@
-html,body {
+html, body {
     height: 100%;
     margin: 0;
 }
@@ -25,6 +25,12 @@ html,body {
     object-fit: cover;
 }
 
+.audio-background {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
 .main-wrapper {
     display: flex;
     flex-direction: column;
@@ -37,7 +43,10 @@ html,body {
     height: 150px;
     border-radius: 40px;
     background-color: #AF701D;
-    box-shadow: inset -2px -5px 4px rgba(16, 13, 106, 0.6), inset 10px 5px 4px rgba(232, 225, 216, 0.5), 5px 10px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 
+        inset -2px -5px 4px rgba(16, 13, 106, 0.6),
+        inset 10px 5px 4px rgba(232, 225, 216, 0.5),
+        5px 10px 8px rgba(0, 0, 0, 0.5);
 }
 
 .btn-play {
@@ -45,37 +54,9 @@ html,body {
     height: 120px;
     border-radius: 40px;
     background-color: #0E7B15;
-    box-shadow: inset -5px -8px 4px rgba(0, 0, 0, 0.5), inset 5px 8px 4px rgba(152, 233, 155, 0.5);
-}
-
-.card-music, .card-admin{
-    width: 180px;
-    height: 100px;
-    border-radius: 40px;
-    background-color: #AF701D;
-    box-shadow: inset -2px -5px 4px rgba(16, 13, 106, 0.6), inset 10px 5px 4px rgba(232, 225, 216, .5);
-}
-
-.btn-music {
-    width: 160px;
-    height: 80px;
-    border-radius: 40px;
-    background-color: #0E7B15;
-    box-shadow: inset -5px -8px 4px rgba(0, 0, 0, 0.5), inset 5px 8px 4px rgba(152, 233, 155, 0.5);
-}
-
-.btn-admin {
-    width: 160px;
-    height: 80px;
-    border-radius: 40px;
-    background-color: #0E7B15;
-    box-shadow: inset -5px -8px 4px rgba(0, 0, 0, 0.5), inset 5px 8px 4px rgba(152, 233, 155, 0.5);
-}
-
-.btn-music i,
-.btn-admin {
-    color: #FEE527;
-    font-size: 32px;
+    box-shadow: 
+        inset -5px -8px 4px rgba(0, 0, 0, 0.5),
+        inset 5px 8px 4px rgba(152, 233, 155, 0.5);
 }
 
 .btn-play i {
@@ -83,73 +64,28 @@ html,body {
     font-size: 60px;
 }
 
-.audio-background {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-}
-
-/* aphabet home */
-
-.alphabet-home {
-    min-height: 100dvh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.alphabet-title {
-    background-color: #0b5488;
-    border: 1rem solid #af701d;
-    color: #fee527;
-    font-weight: bold;
-    font-size: clamp(1.8rem, 4vw, 3.5rem);
+.card-music, .card-admin {
+    width: 180px;
+    height: 100px;
     border-radius: 40px;
-    box-shadow: inset -5px -7px 3px rgba(32, 15, 0, 0.5), inset 5px 7px 3px rgba(232, 225, 216, 0.5);
-    margin: 0 15px;
+    background-color: #AF701D;
+    box-shadow: 
+        inset -2px -5px 4px rgba(16, 13, 106, 0.6),
+        inset 10px 5px 4px rgba(232, 225, 216, 0.5);
 }
 
-.alphabet-home, .back-button a {
-    text-decoration: none;
-    color: #fee527;
+.btn-music, .btn-admin {
+    width: 160px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #0E7B15;
+    box-shadow: 
+        inset -5px -8px 4px rgba(0, 0, 0, 0.5),
+        inset 5px 8px 4px rgba(152, 233, 155, 0.5);
 }
 
-.alphabet-button {
-    width: 130px;
-    color: #fee527;
-    font-size: clamp(1.2rem, 2vw, 2rem);
-    background-color: #af1d1d;
-    border: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 700;
-    box-shadow: inset -5px -7px 3px rgba(32, 15, 0, 0.5), inset 5px 7px 3px rgba(232, 225, 216, 0.5);
-    transition: transform 0.3s ease-in-out;
-}
-
-.alphabet-button:hover {
-    transform: scale(1.2);
-}
-
-.button-container {
-    background-color: #edde92c7;
-}
-
-.numbers-button {
-    width: 130px;
-    color: #fee527;
-    font-size: clamp(1.2rem, 2vw, 2rem);
-    background-color: #af1d1d;
-    border: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 700;
-    box-shadow: inset -5px -7px 3px rgba(32, 15, 0, 0.5), inset 5px 7px 3px rgba(232, 225, 216, 0.5);
-    transition: transform 0.3s ease-in-out;
-}
-
-.numbers-button:hover {
-    transform: scale(1.2);
-}
-
-.numbers-container {
-    background-color: #edde92c7;
+.btn-music i,
+.btn-admin {
+    color: #FEE527;
+    font-size: 32px;
 }
