@@ -1,4 +1,4 @@
- html,body {
+html,body {
     height: 100%;
     margin: 0;
 }
@@ -206,10 +206,10 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.number-button:hover {
+.numbers-button:hover {
     transform: scale(1.2);
 }
 
-.button-container {
+.numbers-container {
     background-color: #edde92c7;
 }

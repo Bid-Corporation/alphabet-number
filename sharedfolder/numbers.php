@@ -41,6 +41,15 @@
             </div>
         </div>
     </div>
+    <div class="row justify-content-center my-3">
+                <div class="col-12 mx-auto">
+                    <div class="back-button">
+                        <button><a href="alphanum.php"><i class="fa-solid fa-arrow-left"></i></a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         function toggleMusic(button) {
