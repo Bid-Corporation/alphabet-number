@@ -1,20 +1,19 @@
 <?php
-$char = isset($_GET['num']) ? $_GET['num'] : '0';
+require_once __DIR__ . '/../connect.php';
+$char = isset($_GET['num']) ? (int)$_GET['num'] : null;
+$stmt = mysqli_prepare($conn, "SELECT numberValue, numberWord FROM numberWords WHERE numberValue = ? LIMIT 1");
+mysqli_stmt_bind_param($stmt, 'i', $char);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 
-$num = [
-  '0' => 'Zero',
-  '1' => 'One',
-  '2' => 'Two',
-  '3' => 'Three',
-  '4' => 'Four',
-  '5' => 'Five',
-  '6' => 'Six',
-  '7' => 'Seven',
-  '8' => 'Eight',
-  '9' => 'Nine'
-];
+if ($row = mysqli_fetch_assoc($result)) {
+    $char = htmlspecialchars($row['numberValue']);
+    $word = htmlspecialchars($row['numberWord']);
+} else {
+    $word = 'Unknown';
+    $char = htmlspecialchars($char);
+}
 
-$word = isset($num[$char]) ? $num[$char] : 'Unknown';
 ?>
 <!doctype html>
 <html lang="en">
@@ -41,11 +40,11 @@ $word = isset($num[$char]) ? $num[$char] : 'Unknown';
         <div class="col">
           <div class="card-letters">
             <div class="card-red">
-              <div class="card-right d-flex justify-content-center align-items-center me-4">
-                <h1 style="color: #fee527; font-size: 6rem; margin: 0;"><?= $char ?></h1>
+              <div class="card-right m-5 d-flex justify-content-center align-items-center me-4">
+                <h1 style="color:#fee527;font-size:6rem;margin:0;"><?= $char ?></h1>
               </div>
               <div class="d-flex align-items-center">
-                <h1 style="color: #fee527; font-size: 3rem; margin: 0;">is for <?= $word ?></h1>
+                <h1 style="color:#fee527;font-size:3rem;margin:0;">is for <?= $word ?></h1>
               </div>
             </div>
             <div class="card-buttons">
