@@ -44,7 +44,7 @@
                             </button>
                         </div>
                         <div class="card-admin p-2 d-flex align-items-center justify-content-center">
-                            <button class="btn btn-admin">
+                            <button class="btn btn-admin" onclick="location.href='admin.php'">
                                 <i class="fas fa-user"></i>
                             </button>
                         </div>
