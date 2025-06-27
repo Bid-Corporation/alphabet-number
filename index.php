@@ -33,7 +33,7 @@
 
                     <div class="card-play p-2 d-flex align-items-center justify-content-center">
                         <a href="sharedfolder/alphanum.php" class="btn btn-play">
-                            <i class="fas fa-play" style="margin-top: 1.3rem;"></i>
+                            <i class="fas fa-play" style="margin-top: 1.8rem;"></i>
                         </a>
                     </div>
 
