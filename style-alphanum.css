@@ -57,6 +57,16 @@ html, body {
   text-decoration: none;
 }
 
+.alphabet-button:active,
+.alphabet-button:focus,
+.number-button:active,
+.number-button:focus {
+  background-color: rgba(11, 84, 136, 1) !important;
+  box-shadow: inset -5px -8px 3px rgba(16, 13, 106, 0.5),
+              inset 5px 8px 3px rgba(232, 225, 216, 0.5) !important;
+  outline: none;
+}
+
 .button-label {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;

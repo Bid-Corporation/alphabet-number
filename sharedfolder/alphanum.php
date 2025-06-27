@@ -43,23 +43,31 @@
   </div>
 
   <script>
-    function toggleMusic(button) {
-      const audio = document.getElementById('bgAudio');
-      const icon = button.querySelector('i');
+  function toggleMusic(button) {
+    const audio = document.getElementById('bgAudio');
+    const icon = button.querySelector('i');
 
-      if (audio.paused) {
-        audio.play();
-        icon.classList.remove('fa-volume-xmark');
-        icon.classList.add('fa-volume-high');
-        button.style.backgroundColor = '#2297EB';
-      } else {
-        audio.pause();
-        icon.classList.remove('fa-volume-high');
-        icon.classList.add('fa-volume-xmark');
-        button.style.backgroundColor = '#D80303';
-      }
+    // Always remove any hover effect via inline styles
+    button.onmouseenter = () => {
+      button.style.backgroundColor = audio.paused ? '#D80303' : '#2297EB';
+    };
+    button.onmouseleave = () => {
+      button.style.backgroundColor = audio.paused ? '#D80303' : '#2297EB';
+    };
+
+    if (audio.paused) {
+      audio.play();
+      icon.classList.remove('fa-volume-xmark');
+      icon.classList.add('fa-volume-high');
+      button.style.backgroundColor = '#2297EB'; // Blue
+    } else {
+      audio.pause();
+      icon.classList.remove('fa-volume-high');
+      icon.classList.add('fa-volume-xmark');
+      button.style.backgroundColor = '#D80303'; // Red
     }
-  </script>
+  }
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
