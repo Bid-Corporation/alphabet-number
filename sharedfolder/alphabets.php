@@ -44,7 +44,7 @@ $alphabetsResult = mysqli_query($conn, $sql)
               while ($row = mysqli_fetch_assoc($alphabetsResult)) {
 
                   $letter = htmlspecialchars($row['alphabets']);          
-                //   $word   = htmlspecialchars($row['alphabetsWord']);      
+                 $word   = htmlspecialchars($row['alphabetsWord']);      
                   $link   = 'perletters.php?char=' . rawurlencode($letter);
 
                   echo <<<HTML
