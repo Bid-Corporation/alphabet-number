@@ -70,6 +70,39 @@ $numbersResult = mysqli_query($conn, $sql)
     </div>
   </div>
 
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const audio = document.getElementById('bgAudio');
+
+        // Attempt to autoplay
+        audio.play().catch(err => {
+            console.warn("Autoplay failed (likely due to browser policy):", err);
+        });
+    });
+
+    function toggleMusic(button) {
+        const audio = document.getElementById('bgAudio');
+        const icon = button.querySelector('i');
+
+        if (audio.paused) {
+            audio.play().then(() => {
+                icon.classList.remove('fa-volume-xmark');
+                icon.classList.add('fa-volume-high');
+                button.classList.remove('muted');
+                button.classList.add('unmuted');
+            }).catch(err => {
+                console.error("Audio play failed:", err);
+            });
+        } else {
+            audio.pause();
+            icon.classList.remove('fa-volume-high');
+            icon.classList.add('fa-volume-xmark');
+            button.classList.remove('unmuted');
+            button.classList.add('muted');
+        }
+    }
+</script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
