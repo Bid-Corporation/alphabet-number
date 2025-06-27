@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  font-family: "Baloo 2", sans-serif;
 }
 
 .video-background {
@@ -68,7 +69,6 @@ html, body {
 }
 
 .button-label {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   font-size: 50px;
   color: #fee527;

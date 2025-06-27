@@ -2,6 +2,7 @@ html,
 body {
     height: 100%;
     margin: 0;
+    font-family: "Baloo 2", sans-serif;
 }
 
 .video-background {
