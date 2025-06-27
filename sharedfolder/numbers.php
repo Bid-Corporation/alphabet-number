@@ -8,14 +8,17 @@ $numbersResult = mysqli_query($conn, $sql)
 
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Numbers</title>
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../style-numbers.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -37,21 +40,21 @@ $numbersResult = mysqli_query($conn, $sql)
         </div>
       </div>
 
-<div class="numbers-container mx-auto my-3">
-  <?php
+      <div class="numbers-container mx-auto my-3">
+        <?php
         while ($row = mysqli_fetch_assoc($numbersResult)) {
 
-            $num     = htmlspecialchars($row['numberValue']);  
-            // $numWord = htmlspecialchars($row['numberWord']);   
-            $link    = 'pernumbers.php?num=' . rawurlencode($num);
-  ?>
-            <a href="<?php echo $link; ?>" target="_self" title="<?php echo $numWord; ?>">
-              <button class="numbers-button rounded-5"><?php echo $num; ?></button>
-            </a>
-  <?php
+          $num     = htmlspecialchars($row['numberValue']);
+          // $numWord = htmlspecialchars($row['numberWord']);   
+          $link    = 'pernumbers.php?num=' . rawurlencode($num);
+        ?>
+          <a href="<?php echo $link; ?>" target="_self" title="<?php echo $numWord; ?>">
+            <button class="numbers-button rounded-5"><?php echo $num; ?></button>
+          </a>
+        <?php
         }
-  ?>
-</div>
+        ?>
+      </div>
 
 
       <div class="row justify-content-center my-4">
@@ -69,4 +72,5 @@ $numbersResult = mysqli_query($conn, $sql)
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -8,14 +8,17 @@ $alphabetsResult = mysqli_query($conn, $sql)
 
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alphabets</title>
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../style-alphabets.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -38,22 +41,22 @@ $alphabetsResult = mysqli_query($conn, $sql)
 
       <div class="button-container" id="alphabet-buttons">
         <?php
-          if (mysqli_num_rows($alphabetsResult) == 0) {
-              echo '<p class="text-muted">No records found.</p>';
-          } else {
-              while ($row = mysqli_fetch_assoc($alphabetsResult)) {
+        if (mysqli_num_rows($alphabetsResult) == 0) {
+          echo '<p class="text-muted">No records found.</p>';
+        } else {
+          while ($row = mysqli_fetch_assoc($alphabetsResult)) {
 
-                  $letter = htmlspecialchars($row['alphabets']);          
-                 $word   = htmlspecialchars($row['alphabetsWord']);      
-                  $link   = 'perletters.php?char=' . rawurlencode($letter);
+            $letter = htmlspecialchars($row['alphabets']);
+            $word   = htmlspecialchars($row['alphabetsWord']);
+            $link   = 'perletters.php?char=' . rawurlencode($letter);
 
-                  echo <<<HTML
+            echo <<<HTML
                     <a href="{$link}" target="_self" title="{$word}">
                       <button class="alphabet-button rounded-5">{$letter}</button>
                     </a>
                   HTML;
-              }
           }
+        }
         ?>
       </div>
 
@@ -73,4 +76,5 @@ $alphabetsResult = mysqli_query($conn, $sql)
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -9,15 +9,16 @@ mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 
 if ($row = mysqli_fetch_assoc($result)) {
-    $word = htmlspecialchars($row['alphabetsWord']);
-    $char = htmlspecialchars($char);
+  $word = htmlspecialchars($row['alphabetsWord']);
+  $char = htmlspecialchars($char);
 } else {
-    $word = 'Unknown';
-    $char = htmlspecialchars($char);
+  $word = 'Unknown';
+  $char = htmlspecialchars($char);
 }
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +26,11 @@ if ($row = mysqli_fetch_assoc($result)) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../style-perletters.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="video-background">
     <video autoplay loop muted playsinline src="../background/bgvideo.mp4"></video>
@@ -42,10 +47,10 @@ if ($row = mysqli_fetch_assoc($result)) {
           <div class="card-letters">
             <div class="card-red" style="width: 650px">
               <div class="card-right m-0 d-flex justify-content-center align-items-center m-4">
-                <h1 style="color:#fee527;font-size:6rem;margin:0;"><?= $char ?></h1>
+                <h1 style="color:#fee527;font-size:clamp(6rem, 10vw, 10rem);margin:0;"><?= $char ?></h1>
               </div>
-              <div class="d-flex align-items-center">
-                <h1 style="color:#fee527;font-size:3rem;margin:0;">is for <?= $word ?></h1>
+              <div class="d-flex align-items-center text-center">
+                <h1 style="color:#fee527;font-size:clamp(2.6rem, 4vw, 3.6rem);margin:0;">is for <?= $word ?></h1>
               </div>
             </div>
             <div class="card-buttons">
@@ -60,7 +65,7 @@ if ($row = mysqli_fetch_assoc($result)) {
                 </a>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
@@ -68,4 +73,5 @@ if ($row = mysqli_fetch_assoc($result)) {
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
