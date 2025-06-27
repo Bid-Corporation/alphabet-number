@@ -48,7 +48,7 @@ html, body {
               inset 5px 8px 3px rgba(232, 225, 216, 0.5);
 }
 
-.number-title {
+.number-title, .admin-title {
   background-color: #0b5488;
   color: #fee527;
   font-weight: bold;

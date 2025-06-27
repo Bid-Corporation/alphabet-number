@@ -119,3 +119,9 @@ html, body {
     height: auto;
     display: inline-block;
 }
+.admin-container {
+  background-color: #af701d;
+  border-radius: 40px;
+  box-shadow: inset -5px -8px 3px rgba(16, 13, 106, 0.5),
+              inset 5px 8px 3px rgba(232, 225, 216, 0.5);
+}

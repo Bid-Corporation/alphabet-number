@@ -31,9 +31,28 @@ $numRes   = mysqli_query($conn, $numSql);
       overflow-x: auto;
     }
     .admin-title {
-      color: #fff;
-      text-shadow: 1px 1px 3px rgba(0,0,0,.8);
-    }
+        background-color: #0b5488;
+        color: #fee527;
+        font-weight: bold;
+        font-size: clamp(1.6rem, 3.5vw, 3.5rem);
+        text-shadow: 1px 1px 1px black;
+        border-radius: 40px;
+        padding: 0.5rem 1.5rem;
+        text-align: center;
+        box-shadow:
+    inset -5px -7px 3px rgba(32, 15, 0, 0.5),
+    inset 5px 7px 3px rgba(232, 225, 216, 0.5);
+}
+
+.admin-container {
+        background-color: #af701d;
+        border-radius: 40px;
+        padding: 2rem;
+        box-shadow:
+            inset -5px -8px 3px rgba(16, 13, 106, 0.5),
+            inset 5px 8px 3px rgba(232, 225, 216, 0.5);
+}
+
   </style>
 </head>
 
@@ -45,9 +64,14 @@ $numRes   = mysqli_query($conn, $numSql);
     <audio id="bgAudio" loop src="background/bgaudio.mp3" autoplay></audio>
   </div>
 
-  <div class="container-fluid py-5">
-    <h1 class="admin-title text-center mb-5 fw-semibold">Database Overview</h1>
-    <div class="container mb-5 table-wrapper">
+  <div class="col-12 col-md-6  mx-auto">
+    <div class="admin-container p-3">
+    <div class="admin-title p-3 text-center">Database Overview</div>
+</div>
+  </div>
+  
+    
+    <div class="container mb-5 table-wrapper" style="background: rgba(254, 229, 39, 0.5);">
       <h2 class="h4 text-white mb-3">Alphabets Table</h2>
       <table class="table table-hover table-bordered table-dark table-striped align-middle mb-0">
         <thead>
@@ -69,7 +93,7 @@ $numRes   = mysqli_query($conn, $numSql);
       </table>
     </div>
 
-    <div class="container table-wrapper">
+    <div class="container table-wrapper" style="background: rgba(254, 229, 39, 0.5);">
       <h2 class="h4 text-white mb-3">Numbers Table</h2>
       <table class="table table-hover table-bordered table-dark table-striped align-middle mb-0">
         <thead>
@@ -94,8 +118,10 @@ $numRes   = mysqli_query($conn, $numSql);
     <div class="row justify-content-center mt-5">
       <div class="col-auto">
         <div class="card-back">
+        <div class="card-music p-2 d-flex align-items-center justify-content-center">
           <button class="btn btn-admin" onclick="location.href='index.php'">
             <i class="fas fa-house"></i>
+          </div>
           </button>
         </div>
       </div>
