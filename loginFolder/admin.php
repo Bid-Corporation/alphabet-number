@@ -118,7 +118,7 @@ $numRes   = mysqli_query($conn, $numSql);
       <div class="col-auto">
         <div class="card-back">
         <div class="card-music p-2 d-flex align-items-center justify-content-center">
-          <button class="btn btn-admin" onclick="location.href='../index.php'">
+          <button class="btn btn-admin" onclick="location.href='../index.php  '">
             <i class="fas fa-house"></i>
           </div>
           </button>
